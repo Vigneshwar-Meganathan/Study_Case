@@ -1,0 +1,28 @@
+EXPLORE TOMCAT AND COMPONENTS [CLUSTER, CATALINA JASPER AND COYOTE] 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+WEB SERVER: {TOMCAT}
+   The web server is the responsible to run the web application.
+   The web server handles only static page [html, image file. etc]
+WEB CONTAINER:
+   The web container is part of web server. [stand alone web container]
+   The web container is the resposible to manage and excute the servlet and jsp.
+   It contains to container server container (servlet engine), Jsp container (Jsp engine)
+Servlet Container: [CATALINA] 
+   It responsible for manage and excute the servlet lifecycle.
+Jsp [Java Server Page] Container: [JASPER]
+   It responsible for manage and excute jsp components.
+   Vedio Tutorial URL: https://www.youtube.com/watch?v=XT6WfM_fNu8
+COYOTE:
+   COYOTE is a connector for Tomcat that supports the HTTP 1.1 protocal as a web server.
+   This allows CATALINA, nnominally a java servlet or jsp container to also act as a plain web severr that serves local files as HTTP documents.
+   COYOTE listens for the incommin connections to the server a on a specfic TCP port and forwards the request to the TOMCAT engine to process the request and  
+    send back a response to the requesting client.
+   [OR]
+    Coyote listens for incoming connections on configured TCP ports on the server and forwards requests to the Tomcat Engine for processing 
+	 and returning a response to the requesting client.
+CLUSTER:
+   Tomcat clustering is a group of Tomcat instances that are connected. An instance of Tomcat is an independent system. 
+   Clustering instances of Tomcat makes them interconnected.
+   Cluster can provide faster processing speed, larger storage capacity, better data integrity, greater reliability and wider availability of resources.
+   It helps in load balancing, high availability, high performance or large-scale processing.
+   

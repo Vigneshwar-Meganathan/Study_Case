@@ -1,0 +1,98 @@
+DIFFERENCE BETWEEN .JAR .WAR AND .EAR
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+What is .JAR file:
+   A JAR file is the file with java class, associate metadata and resource such has text, images in a single file.
+   JAR stands for Java ARchive.
+   JAR is a group of .class files.
+   It allows java runtime environment (JRE) to deploy entire application including the classes and related resource in a single request.
+   
+What is .WAR file:
+   A WAR file contains the files of a web project, it associate with servlet, JSP, XML, HTML, CSS and JavaScript files.
+   WAR stands for Web Application ARchive or Web ARchive.
+   As a WAR file combines all the files into a single unit, it takes less time to transfer a file from the client to server.
+   It is possible to deploy the .WAR file using web server control panel.
+   Using tomcat apache sever we can deploy the .war file locate the .war file and paste the file in tomcat/webapp/ folder.
+   Or in tomcat web sever go to the manager page and upload the .war file and delpoy it will automatically extract the file and it will deploy.
+   We can create the .war file usin cmd. Command Line:jar -cvf namethewarfile.war (ex:testweb.war)
+   Inside the WAR file: https://blackbery4a.wordpress.com/2009/11/24/web-application-archive-war/
+   
+What is .EAR file:
+   A EAR file 
+   EAR stands for enterprise Application ARchive or Enterprise ARchive
+   EAR (Enterprise Application aRchive) is a file format used by Jakarta EE for packaging one or more modules into a single archive 
+   so that the deployment of the various modules onto an application server happens simultaneously
+   
+   META-INF Directory:
+    The META-INF folder is the home for the MANIFEST.MF file. This file contains meta data about the contents of the JAR. For example, there is an entry called Main-Class
+	that specifies the name of the Java class with the static main() for executable JAR files.
+   WEB-INF Directory:
+    This directory, which is contained within the Document Root, is invisible from the web container.  It contains all resources needed to run the application, 
+	from Java classes, to JAR files and libraries, to other supporting files that the developer does not want a web user to access.     
+   	
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+WHAT IS MAVEN AND POM.XML FILE:
+
+What is POM.xml:
+   It's the core element for all the maven projects
+   Maven projects consists of one configurable file called pom.xml. Which stands for the abbreviation Project object Model.
+   This xml will always be located in the root directory of all maven project.
+   Pom.xml contains all necessary information about the configuration details, dependences included and plug-ins included in the project.
+Some of the configuration that can be handle in the POM.xml file :
+   Dependence used in the project (JAR files)
+   Plugins used (report Plugin)
+   Project Version
+   Mailing List
+   Reporting
+   Build Profile.
+   Sample POM.xml Code: https://www.dineshonjava.com/maven-pom-xml-file/
+   Maven O&A URL: https://www.javatpoint.com/maven-interview-questions
+   
+INSIDE POM.XML FILE:
+   
+   <?xml version="1.0" encoding="UTF-8"?>
+   
+   <project xmlns="http://maven.apache.org/POM/4.0.0" 
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+   http://maven.apache.org/xsd/maven-4.0.0.xsd">
+   <modelVersion>4.0.0</modelVersion>                   ------4.0.0 is the latest version of the pom file structure 
+
+   <groupId>com.vogella.maven.first</groupId>           ------Unique identifier of the organization or the project 
+   <artifactId>com.vogella.maven.first</artifactId>     ------Name of the project which is built 
+   <version>1.0-SNAPSHOT</version>                      ------Defines the currently version of the project 
+
+   <name>com.vogella.maven.first</name>                    
+
+   <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>11</maven.compiler.source>   -------Set Java compiler level for the Java project
+    <maven.compiler.target>11</maven.compiler.target>   -------Set Java compiler level for the Java project
+   </properties>
+   </project>   
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------   
+What is maven:
+   Maven is a build tool that helps in project management. The tools helps in building and documenting the project.
+   Build Tool:
+    Generate Source code 
+    Generating documentation from the source code
+	Compiling of source code
+	Packagging of the compilied codes into jar files.
+	Installing the packaged code in local repositroy, server repositroy or central repositroy.
+   Maven is written in java and C# and is based on Project Object Model (POM).
+   Project Object Model:
+    POM is a xml file that has all the information rearding project and configuration details 
+    When we tend to execute a task. Maven searches for the POM in the current directory.
+    POM contains goals and plugines used in the project when we execute the project it will check the pom file gather the information and it runs the code.
+   Tutorial Video URL Link: https://www.youtube.com/watch?v=bSaBmXFym30
+   Tutorial Video for changing the local repositroy: https://www.youtube.com/watch?v=yo97Wt5vXkk
+
+Maven Lifecycle and Complete explanation:
+    Video Tutorial URL: https://www.youtube.com/watch?v=p0LPfK_oNCM&t=2314s
+	
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------   
+
+      	
+
+   
+   
+	 

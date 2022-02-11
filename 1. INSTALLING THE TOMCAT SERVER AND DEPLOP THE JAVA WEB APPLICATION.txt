@@ -1,0 +1,49 @@
+INSTALLING THE TOMCAT SERVER AND DEPLOY THE JAVA WEB APPLICATION:
+
+Basics of Java
+   Basic definition of JDK:
+   JDK is the software development environment used for making applet and java application. JDK is said Java Development Kit.
+   Basic definition of JRE:
+    JRE is a piece of a software which is designed to run other software. It contains the class libraries, loader class, and JVM. In simple terms, 
+	if you want to run Java program you need JRE. If you are not a programmer, you don’t need to install JDK, but just JRE to run Java programs.
+   Basic definition of JVM:
+    JVM is an engine that provides a runtime environment to drive the Java Code or applications. It converts Java bytecode into machine language. JVM is a part of 
+	Java Run Environment (JRE). It cannot be separately downloaded and installed. To install JVM, you need to install JRE. The full form of JVM is Java Virtual Machine
+Basic of Tomcat:
+   Need to install the Tomcat server on your personal computer
+	link:https://tomcat.apache.org/download-10.cgi
+   Before installing the Tomcat server need to install the Java application JDK
+	Link:https://www.oracle.com/java/technologies/downloads/
+   After installing the java application, install the Tomcat Server installer 
+    Select the category Full and check the Port and select Next, then you need to redirect the java application path while installing.
+	Just click finish.
+   Then, Need to enable the set environment variable for java and tomcat.
+    Right click of This PC select Properities on right side select Advance system settings and click environment variable.
+    need to set path:C:\Program Files\Apache Software Foundation\Tomcat 10.0\bin
+					:C:\Program Files\Java\jdk-17.0.2\bin
+	need to create JAVA_HOME:C:\Program Files\Java\jdk-17.0.2
+				 TOMCAT_HOME:C:\Program Files\Apache Software Foundation\Tomcat 10.0
+	Just Open Browser and search localhost:8080
+    For admin access go to C:\Program Files\Apache Software Foundation\Tomcat 10.0\conf 
+	Open the tomcat-users.xml with Notepad++ edit the user name and password and restart the service.
+	This tomcat supports the .WAR file and if u place the .HTML file on webapps need to create the folder for that .HTML file it will works.
+Tomcat User right:
+   manager-gui — Access to the HTML interface. 
+   manager-status — Access to the "Server Status" page only.
+   manager-script — Access to the tools-friendly plain text interface that is described in this document, and to the "Server Status" page.
+   manager-jmx — Access to JMX proxy interface and to the "Server Status" page.
+				 JMX is said to be Java Management Extension its is used to manage and monitoring application, system objects and devices.
+Log files in Tomcat installed folder:
+   Localhost access.txt
+    When we deploy the .war file if you start or stop the service it stored the log file with date and time.
+    It will check when the service is start, stop and also it checks the reload of the .war file.
+   Catalina.log:
+    Same process as like log folder.
+    It will show the log of Jasper (JSP engine) process and catalina (Servlet Engine) show it is stop, start or resload state.
+   Manage log:
+    It same log report like Tomcat server log and catalina log.
+   Common Daemon host log:
+    When we restart, start or stop the tomat service there is be a log on this log file and along there is a log on catalina server and local host.
+	
+
+ 
