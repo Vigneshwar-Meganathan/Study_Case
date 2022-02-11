@@ -1,0 +1,44 @@
+CONFIGURING THE SSL CERTIFICATE ON TOMCAT SERVER AND ACCESS THE APPLICATION THROUGH HTTS:
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+How HTTPS works:
+   HTTPS is a Hypertext Transfer Protocal Secure is mostly usefull for online transcation and e-shopping it will keeps the user datas secured.
+   For example we are searching www.sbi.com form our pc it will send the request to the www.sbi.com server for secure connection.
+   From server it will send the pubic key attached with digital certificated then it will check wheather the cerficate is valid.
+   Then it will generate the Symentric key and one  copy of the symentic key will encrptyed and send to the server.
+   In the server there will be a private key using that it will decrypt that symentic key.
+   Now Pc and sever both have the same symentic key and they communicate each other by encrpt and decrypt the datas throught the HTTPS.
+
+STEP 1:
+   we need to create the .cert file using cmd locate the local path and we need write the command 
+   path:D:\SSL
+   In cmd: keytool -genkeypair -alias Mycert -keyalg RSA -keystore "D:\SSL\Mycert.cert"
+   After that it will ask the password location details.
+   then the .cert created.
+STEP 2:
+   Need to change the SSL path and password so go to the tomcat installation path 
+   path: C:\Program Files\Apache Software Foundation\Tomcat 9.0\conf
+   There will be a server.xml file 
+   We need to replace this code
+    <Connector SSLEnabled="true" acceptCount="100" clientAuth="false"
+    disableUploadTimeout="true" enableLookups="false" maxThreads="25"
+    port="8443" keystoreFile="D:\SSL\Mycert.cert" keystorePass="pass123"
+    protocol="org.apache.coyote.http11.Http11NioProtocol" scheme="https"
+    secure="true" sslProtocol="TLS" />
+	Save the xml file and restart the service. 
+	Go to the browers and run https://local:8443
+STEP 3: 
+   If we are going to run the web application 
+   Just go to the web.xml file and paste the below code
+      <security-constraint>
+    <web-resource-collection>
+        <web-resource-name>securedapp</web-resource-name>
+        <url-pattern>/*</url-pattern>
+    </web-resource-collection>
+    <user-data-constraint>
+        <transport-guarantee>CONFIDENTIAL</transport-guarantee>
+    </user-data-constraint>
+</security-constraint>
+STEP 4: 
+   Deploy the .war file.
+   Vedio Tutorial URL: https://www.youtube.com/watch?v=MFYgCHC8t0o
+   Vedio Tutorial URL: https://www.youtube.com/watch?v=RaEG_DOpNPc&t=5s
