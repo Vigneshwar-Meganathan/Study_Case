@@ -133,6 +133,7 @@ STEP 1:
    
    Video Tutorial URL: https://www.youtube.com/watch?v=rbuR9Q_55h4
    Website Reference: https://springframework.guru/log4j-2-configuration-using-properties-file/
+   Video Tutorial URL: https://www.youtube.com/watch?v=Mv6SjaCdE0g
    
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
    
