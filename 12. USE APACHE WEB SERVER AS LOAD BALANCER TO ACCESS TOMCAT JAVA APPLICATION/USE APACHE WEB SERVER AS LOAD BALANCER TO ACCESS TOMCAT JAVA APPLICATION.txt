@@ -1,0 +1,39 @@
+USE APACHE WEB SERVER AS LOAD BALANCER TO ACCESS TOMCAT JAVA APPLICATION:
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+MOD_JK:
+	The mod_jk connector is an Apache HTTPD module that allows HTTPD to communicate with Apache Tomcat instances over the AJP protocol.  
+	The module is used in conjunction with Tomcat's AJP Connector component.
+	Apache Tomcat uses Connector components to allow communication between a Tomcat instance and another party, 
+	 such as a browser, server, or another Tomcat instance that is part of the same network.
+	Using the AJP connector, Apache Tomcat instances can exchange data with mod_jk enabled instances of Apache HTTPD, using the AJP protocol.
+AJP PROTOCAL:
+   AJP Connectors are most commonly implemented in Tomcat through the plug-in technology mod_jk, a re-write of the defunct mod_jserv plug-in with extensive optimization, 
+    support for more protocols through the jk library, and Tomcat-specific functionality.
+DOWNLOAD MOD_JK BELOW LINK:
+   DOWNLOAD LINK: https://www.apachelounge.com/download/
+   Copy that mok_jk file to the below path:
+   PATH: C:\Apache24\modules
+TOMCAT SERVER SERVER.XML FILE:
+   Now we need to set the AJP ports for all 3 instance tomcat1, tomcat2, tomcat3 given below path.
+    PATH: C:\Program Files\Apache Software Foundation\Tomcat Instance 1\conf
+    PATH: C:\Program Files\Apache Software Foundation\Tomcat Instance 2\conf
+    PATH: C:\Program Files\Apache Software Foundation\Tomcat Instance 3\conf
+   Now we need to unmound the command and set the ajp port.
+    For Example: 
+	<Connector protocol="AJP/1.3"
+               port="8109"
+               redirectPort="8141"  secretRequired=""/>	
+    <Engine name="Catalina" defaultHost="localhost" jvmRoute="tomcat1">  
+	(Tomcat1 name of the instance 1)
+	Like the same need to update on all 3 instance and save it.
+EDIT ON APACHE WEB SERVER:
+   At the last we need to wirte the command line to mount the Mod_jk file command given below and save it.
+   Command Line:
+     LoadModule jk_module modules/mod_jk.so
+
+	 JkWorkersFile conf/workers.properties
+
+	 JkMount  /* balancer 
+	 JkMount  /status  stat
+   Video Tutorial URL: https://www.youtube.com/watch?v=9gtpyqhd-NI&t=334s
+   
