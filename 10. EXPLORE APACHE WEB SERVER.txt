@@ -1,0 +1,29 @@
+EXPLORE APACHE WEB SERVER
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+APACHE WEB SERVER:
+   Apache web server is otherwise called as Apache HTTTP server.
+   Apache HTTP Server is a free and open-source web server that delivers web content through the internet.
+   This web server s responsible for accepting directory (HTTP) requests from Internet users and sending them their desired information 
+    in the form of files and Web pages. Much of the Web’s software and code is designed to work along with Apache’s features.
+APACHE WEB SERVER CERTIFICATES:
+   In apache web server there is HTTPS protcoal 
+   HTTPS is said to be a hypertext transfer Protocal Secure.
+   This HTTPS contains to 2 security layer.
+   SSL and TLS 
+   SSL is a Secure Socket Layer.
+   TLS is a  Transport layer Protocal.
+   The SSL is outdated protocal and now its no longer avaiable.
+   The TSL is currently using protocal and the current version is TSL 1.2
+HTTPS PRIVATE KEY AND PUBLIC KEY:
+   The Private key is on the Server Side
+   The Public key is on the Client Side.
+   If we send the request form client machine it will encrypt by the public key into a ciphertext and transfer to the server then decrypt by the Private key.
+    so by the anonymous or by hacker cant access the our information.
+COMPONENTS SUUPPORT APACHE WEB SERVER:
+   Compatible with IPv6.
+   Load Balancing.
+   FTP Connections.
+   Website Link URL: https://www.sumologic.com/blog/apache-web-server-introduction/
+   Website Link URL: https://www.geeksforgeeks.org/difference-between-apache-tomcat-server-and-apache-web-server/
+   
+   
