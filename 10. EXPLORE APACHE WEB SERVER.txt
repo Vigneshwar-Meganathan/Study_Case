@@ -13,7 +13,7 @@ APACHE WEB SERVER CERTIFICATES:
    SSL is a Secure Socket Layer.
    TLS is a  Transport layer Protocal.
    The SSL is outdated protocal and now its no longer avaiable.
-   The TSL is currently using protocal and the current version is TSL 1.2
+   The TLS is currently using protocal and the current version is TLS 1.2
 HTTPS PRIVATE KEY AND PUBLIC KEY:
    The Private key is on the Server Side
    The Public key is on the Client Side.
