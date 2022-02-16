@@ -1,0 +1,91 @@
+GIT AND GITHUB 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+GIT:
+   Git is a distributed version control system for tracking changes in source code during software development.
+GITHUB:
+   GitHub is a web-based cloud service to host your source code(Git repositories). It is a centralized system.
+   Git doesn’t require GitHub but GitHub requires Git.
+DIFFERENCE BETWEEN GIT AND GITHUB:
+     
+				GIT								GITHUB
+		Git is a software.				GitHub is a service.		
+		
+		Git is installed locally on 	GitHub is hosted on the web	
+		the system		
+		
+		Git is focused on version 		GitHub is focused on centralized 
+		control and code sharing.		source code hosting.
+		
+		Git is a version control 		GitHub is a hosting service 
+		system to manage source 		for Git repositories.
+		code history.
+
+GIT COMMAND:
+   git clone
+   git add
+   git status 
+   git push 
+   git pull
+   git commit
+   git reset
+   git merge
+   git rebase
+
+GIT CLONE: 
+   The git clone command all the files are downloaded to the local machine but the remote git repository. Making changes and commit them into local repository will not affect the 
+   remote repository. These changes made on the local machine can be synced with the remote repository anytime the user wants.
+GIT ADD:
+   The git add command is used to add the current content and it will track that file.
+   Command Line: git add .\filename.txt (Ex: Enter the file name)
+GIT COMMIT:
+   The git commit is the continuous of git add command once we track the code using the commit command it will add in local repository.
+   Command Line: git commit -m "MSG" (MSG- Reason for commiting the code and changes to be mentioned)
+GIT STATUS:
+   The git status command help in which branch we are located and how many commits has been done and display the msg of the commit.
+   Command Line: git status
+GIT PUSH:
+   The Git push help to upload the code to the github repository
+   Command Line: git push
+GIT PULL:
+   The git pull command is used to fetch and download content from a remote repository and immediately update the local repository to match that content.
+   Command Line: git pull
+MERGE CONFLICT:
+   The merge conflict occurs when we downloading the remote repository data to the local repository any type of value or msg is defferent it will through the merge conflict error.
+   For Example:
+   a = 1
+   b = 2
+   <<<<<<<< HEAD
+   c = 3
+   ==============
+   c = 45
+   >>>>>>>>>>>4456544545874bc878a
+   d = 4
+   we can set which value or command we need. This way we get the merge conflict error.
+GIT RESET:
+   The git reset is used to reset the commit for example we had nearly 10 commits but i don't need the last 3 commit the last commit should be a 7 commit so using this git reset we can
+   remove the those 3 commit. Every commits had their unique identity number <commit hash> using that we can rest.
+   Command Line: git reset--hard <commit hash>
+GIT MERGE:
+   Is a non-destructive operation
+   Existing branches are not changed in any way
+   Creates a new merge commit in the feature branch   
+   Before commanding the merge checkout which branch are we.
+   This Merge it will create a new commit for the git merge.
+   Command Line: git merge mater 
+GIT REBASE:
+   Moves the entire feature branch to begin on the tip of the master branch
+   Re-writes the project history
+   We get much cleaner and linear project histo  
+   Before commanding the merge checkout which branch are we.
+   Rebase will not create the commit. Just it will add on tip of master.
+   Command Line: git rebase master 
+PULL REQUEST:
+   A pull request is a method of submitting contributions to an open development project.
+   A pull request occurs when a developer asks for changes committed to an external repository to be considered for inclusion in a project’s main repository.
+   Website URL: http://oss-watch.ac.uk/resources/pullrequest#:~:text=A%20pull%20request%20is%20a,to%20an%20open%20development%20project.&text=A%20pull%20request%20occurs%20when,in%20a%20project's%20main%20repository.
+   
+   Video Tutorial URL: https://www.youtube.com/watch?v=hTYsf6bdSJ8
+   Video Tutorial URL: https://www.youtube.com/watch?v=KWAZl2QHC44
+   
+   
+   
