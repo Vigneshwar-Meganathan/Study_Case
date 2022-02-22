@@ -1,0 +1,36 @@
+IAAS, PAAS, SAAS
+-----------------------------------------------------------------------------------------------------------------------------------------
+IAAS: 
+   IAAS is said to be Infrastructure as a Service
+   The infrastructure is the lowest layer in cloud computing. Here, IaaS describes a business model in which no complete solution (hardware and software application) is offered, 
+    but only the hardware required to implement specific applications. This is located in data centers and is also looked after there. Cloud users have access to virtualized computing , 
+    data transport, and data storage components , allowing them to deploy and install any application programs and operating systems.
+   IAAS will maintain Networking, Storage, Servers, Virtualization by Vendors.
+   Example for IAAS: AWS, Microsoft Azure.
+PAAS:
+   PAAS is said to be Platform as a Service.
+   The platform represents the middle layer. Here, less the IT administrator is in demand, but the software developer. Platform as a Service is a service that enables developers to develop and
+    execute their own programs on the infrastructure offered by means of interfaces. For this purpose, the PaaS provider provides development environments in the form of frameworksready. In doing so, he makes 
+	specifications for the programming languages ​​and interfaces to be used, data memories, networks and data processing systems. However, the developer has no ability to administratively or controllably access 
+	the infrastructure used to provide the service.
+   PAAS will maintain Networking, Storage, Servers, Virtualization, Operating System, Middleware, Runtime by Vendors.
+   Example for PAAS: Aws Elastic Beanstalk, Kubernetes.
+SAAS: 
+   SAAS is said to be Software as a Service.
+   Applications represent the last layer and logically build on all previous layers. Software as a Service is a business model in which the software application is no longer sold 
+    to the customer, but is provided as a service for a fee.
+   SAAS will maintain Networking, Storage, Service, Virtualization, Operating System, Middleware, Runtime, Data, Application by Vendors.
+   Example for SAAS: Google Drive, GitHub.
+ 
+DIFFERENCE BETWEEN IAAS, PAAS AND SAAS : 
+		
+			IAAS							PAAS								SAAS	
+		IAAS is used by network 	PAAS is used by developer.		SAAS is used by end user.	
+		architects.	
+		
+		IAAS give access to the 	PAAS give access to run time  	SAAS give access to the end 
+		resources like virtual 		environment to deployment		user.
+		machines and virtual 		and development tools for 
+		storage.					application.
+		
+		
