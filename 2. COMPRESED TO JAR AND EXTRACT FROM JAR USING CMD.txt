@@ -8,7 +8,7 @@ Need to Archive the .JAVA file to .JAR file:
    After that open the cmd 
     cd choose the path folder of the java file and manifest text file
 	then run the command javac test.java you will get the .class file 
-	the right the command jar cmf test.jar manifest.txt test.class 
+	the right the command jar cfn test.jar manifest.txt test.class 
 	Tutorial Video: https://www.youtube.com/watch?v=WTfjbOIfi10
 	Now you witll get the test.jar file.
 	
