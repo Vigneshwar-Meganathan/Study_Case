@@ -2,7 +2,7 @@ name: Verify PR Title and Description
 
 on:
   pull_request:
-    types: [opened, synchronize, reopened]
+    types: [opened, edited]
 
 jobs:
   verify-pr-title-and-description:
@@ -15,18 +15,13 @@ jobs:
           description="${{ github.event.pull_request.body }}"
           regex="^SCRUM-[0-9]+ .+$"
 
-          echo "Checking PR title: $title"
+          echo "Checking PR title and description..."
           if [[ ! "$title" =~ $regex ]]; then
             echo "❌ PR title does not match the required pattern: SCRUM-<number> <message>"
-            echo "Invalid title: $title"
             exit 1
           fi
-          echo "✅ PR title is valid."
-
-          echo "Checking PR description: $description"
           if [[ ! "$description" =~ $regex ]]; then
             echo "❌ PR description does not match the required pattern: SCRUM-<number> <message>"
-            echo "Invalid description: $description"
             exit 1
           fi
-          echo "✅ PR description is valid."
+          echo "✅ Title and description are valid."
