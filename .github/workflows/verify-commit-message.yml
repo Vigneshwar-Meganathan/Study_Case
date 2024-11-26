@@ -1,0 +1,28 @@
+name: Verify Commit Message
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  verify-commit-message:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Verify commit messages
+        run: |
+          commits=$(gh pr view ${{ github.event.pull_request.number }} --json commits -q '.commits[].commit.message')
+          regex="^SCRUM-[0-9]+ .+$"
+          for commit in $commits; do
+            if [[ ! "$commit" =~ $regex ]]; then
+              echo "❌ Commit message does not match the required pattern: SCRUM-<number> <message>"
+              echo "Invalid commit: $commit"
+              exit 1
+            fi
+          done
+          echo "✅ All commit messages are valid."
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
